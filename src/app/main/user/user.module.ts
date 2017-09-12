@@ -4,8 +4,8 @@ import { UserComponent } from './user.component';
 import { Routes, RouterModule } from '@angular/router';
 
 const userRoutes: Routes = [
-  { path: '', redirectTo:'index', pathMatch:'full' },
-  {path:'index', component:UserComponent}
+  { path: '', redirectTo: 'index', pathMatch: 'full' },
+  { path: 'index', component: UserComponent }
 ];
 @NgModule({
   imports: [
