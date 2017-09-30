@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RoleComponent } from './role.component';
 import { Routes, RouterModule } from '@angular/router';
-import {DataService} from '../../core/services/data.service';
+import { DataService } from '../../core/services/data.service';
 import { NotificationService } from '../../core/services/notification.service';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { FormsModule } from '@angular/forms';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 const roleRoute: Routes = [
   { path: '', redirectTo: 'index', pathMatch: 'full' },
@@ -16,9 +17,10 @@ const roleRoute: Routes = [
     CommonModule,
     PaginationModule,
     FormsModule,
+    ModalModule.forRoot(),
     RouterModule.forChild(roleRoute)
   ],
   declarations: [RoleComponent],
-  providers:[DataService,NotificationService]
+  providers: [DataService, NotificationService]
 })
 export class RoleModule { }

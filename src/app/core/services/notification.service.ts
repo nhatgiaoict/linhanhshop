@@ -60,8 +60,8 @@ export class NotificationService {
 
   }
 
-  printSuccsessMessage(message: string) {
-    this._notifier.succsess(message);
+  printSuccessMessage(message: string) {
+    this._notifier.success(message);
   }
 
   printErrorMessage(message: string) {
