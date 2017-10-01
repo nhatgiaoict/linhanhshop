@@ -28,7 +28,7 @@ export class RoleComponent implements OnInit {
   }
 
   loadData() {
-    this._dataService.get('api/appRole/getlistpaging?page=' + this.pageIndex + '&pageSize=' + this.pageSize + '&filter=' + this.filter)
+    this._dataService.get('/api/appRole/getlistpaging?page=' + this.pageIndex + '&pageSize=' + this.pageSize + '&filter=' + this.filter)
       .subscribe((response: any) => {
         this.roles = response.Items;
         this.pageIndex = response.PageIndex;
@@ -38,7 +38,7 @@ export class RoleComponent implements OnInit {
   }
 
   loadRole(id: any) {
-    this._dataService.get('api/appRole/detail/' + id)
+    this._dataService.get('/api/appRole/detail/' + id)
       .subscribe((response: any) => {
         this.entity = response;
       });
