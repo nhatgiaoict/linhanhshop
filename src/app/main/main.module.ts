@@ -6,6 +6,7 @@ import { Router, RouterModule } from '@angular/router';
 import { UserModule } from './user/user.module';
 import { HomeModule } from './home/home.module';
 import { RoleModule } from './role/role.module';
+import { FunctionModule } from './function/function.module';
 import { UtilityService } from '../core/services/utility.service';
 import { AuthenService } from '../core/services/authen.service';
 import { ProductCategoryComponent } from './product-category/product-category.component';
@@ -16,6 +17,7 @@ import { ProductCategoryComponent } from './product-category/product-category.co
     UserModule,
     HomeModule,
     RoleModule,
+    FunctionModule,
     RouterModule.forChild(mainRoutes)
   ],
   providers: [UtilityService, AuthenService],

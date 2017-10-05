@@ -42,7 +42,7 @@
           <tr *ngFor="let user of users">
             <td>{{user.UserName}}</td>
             <td>{{user.FullName}}</td>
-            <td>{{user.BirthDay}}</td>
+            <td>{{user.BirthDay | date: 'dd/MM/yyyy'}}</td>
             <td>{{user.Email}}</td>
             <td>{{user.PhoneNumber}}</td>
             <td><img [src]="baseFolder+user.Avatar" class="img-responsive" width="120" /></td>
@@ -141,7 +141,7 @@
           <div class="form-group">
             <label class="control-label col-md-3 col-sm-3 col-xs-12">Ngày sinh</label>
             <div class="col-md-9 col-sm-9 col-xs-12">
-              <input type="text" [(ngModel)]="entity.BirthDay" daterangepicker [options]="dateOptions" name="birthday" #birthday="ngModel"
+              <input type="text" [(ngModel)]="entity.BirthDay" daterangepicker (selected)="singleSelect($event)" [options]="dateOptions" name="birthday" #birthday="ngModel"
                 class="form-control" />
             </div>
           </div>
