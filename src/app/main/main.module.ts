@@ -7,6 +7,7 @@ import { UserModule } from './user/user.module';
 import { HomeModule } from './home/home.module';
 import { RoleModule } from './role/role.module';
 import { ProductCategoryModule} from './product-category/product-category.module';
+import {ProductModule} from './product/product.module';
 import { FunctionModule } from './function/function.module';
 import { UtilityService } from '../core/services/utility.service';
 import { AuthenService } from '../core/services/authen.service';
@@ -21,6 +22,7 @@ import {TopMenuComponent} from '../shared/top-menu/top-menu.component';
     RoleModule,
     FunctionModule,
     ProductCategoryModule,
+    ProductModule,
     RouterModule.forChild(mainRoutes)
   ],
   providers: [UtilityService, AuthenService],
